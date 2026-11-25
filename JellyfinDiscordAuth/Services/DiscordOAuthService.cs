@@ -168,7 +168,7 @@ namespace JellyfinDiscordAuth.Services
                 return (false, "Failed to retrieve Discord user information.", true);
             }
 
-            string username = userData.Global_name ?? userData.Username;
+            string username = userData.Username;
             _logger.LogInformation("Discord user data received for {Username}.", username);
 
             // Validate server membership and roles
