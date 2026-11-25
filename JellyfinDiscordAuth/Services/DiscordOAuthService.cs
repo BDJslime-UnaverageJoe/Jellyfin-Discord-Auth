@@ -238,7 +238,7 @@ namespace JellyfinDiscordAuth.Services
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, "Error creating user {Username}", username);
-                    return (false, "Something went wrong", true);
+                    return (false, "Failed to create user, check your Discord name for invalid characters", true);
                 }
             }
             else
